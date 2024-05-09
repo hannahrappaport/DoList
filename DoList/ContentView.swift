@@ -13,8 +13,6 @@ struct ContentView: View {
         VStack {
             HStack {
                 Text("To Do")
-                    font(.system(size: 40))
-                     .fontWeight(.black)
                 Spacer()
                 Button {
                     withAnimation{
@@ -35,3 +33,29 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
+/*
+ struct ContentView: View {
+     @State private var showNewTask = false
+     var body: some View {
+         VStack {
+             HStack {
+                 Text("To Do")
+                 Spacer()
+                 Button {
+                     withAnimation{
+                         self.showNewTask = true }
+                 } label: {
+                     Text("+")
+                 }
+             }
+             .padding()
+             Spacer()
+         }
+         if showNewTask {
+             NewToDo()
+         }
+     }
+ }
+ */
+ 
